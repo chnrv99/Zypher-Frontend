@@ -151,13 +151,14 @@ export const Game = {
         x: 4,
         y: 100,
     },
+
     actions: {
         level1: async () => {
             await loadScene("scene1");
         },
         level2: async () => {
             Game.userData = await getUserData();
-            if (Game.userData.level > 5) await loadScene("scene2");
+            if (Game.userData.scene >= 2) await loadScene("scene2");
             else
                 await message({
                     text: "You must conquer the current challenge before venturing further. Face this daunting trial and emerge victorious to unlock new realms. Your destiny eagerly awaits your triumph!",
@@ -165,7 +166,7 @@ export const Game = {
         },
         level3: async () => {
             Game.userData = await getUserData();
-            if (Game.userData.level > 10) await loadScene("scene3");
+            if (Game.userData.scene >= 3) await loadScene("scene3");
             else
                 await message({
                     text: "You must conquer the current challenge before venturing further. Face this daunting trial and emerge victorious to unlock new realms. Your destiny eagerly awaits your triumph!",
@@ -173,23 +174,23 @@ export const Game = {
         },
         level4: async () => {
             Game.userData = await getUserData();
-            if (Game.userData.level > 15) await loadScene("scene4");
+            if (Game.userData.scene >= 4) await loadScene("scene4");
             else
                 await message({
                     text: "You must conquer the current challenge before venturing further. Face this daunting trial and emerge victorious to unlock new realms. Your destiny eagerly awaits your triumph!",
                 });
         },
-        level5: async () => {
-            Game.userData = await getUserData();
-            if (Game.userData.level > 20) await loadScene("scene5");
-            else
-                await message({
-                    text: "You must conquer the current challenge before venturing further. Face this daunting trial and emerge victorious to unlock new realms. Your destiny eagerly awaits your triumph!",
-                });
-        },
+        // level5: async () => {
+        //     Game.userData = await getUserData();
+        //     if (Game.userData.scene >= 5) await loadScene("scene5");
+        //     else
+        //         await message({
+        //             text: "You must conquer the current challenge before venturing further. Face this daunting trial and emerge victorious to unlock new realms. Your destiny eagerly awaits your triumph!",
+        //         });
+        // },
         gameends: async () => {
             Game.userData = await getUserData();
-            if (Game.userData.level === 25) {
+            if (Game.userData.level === 4.1) {
                 Game.setPause(true);
                 await message({
                     title: "Congratulations!",
