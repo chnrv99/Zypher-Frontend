@@ -74,8 +74,8 @@
         { "extends": "ybound", "pos": { "x": 0, "y": 0 } },
         { "extends": "xbound", "pos": { "x": 0, "y": 0 } },
         { "extends": "xbound", "pos": { "x": 1014, "y": 0 } },
-        { "extends": "door", "pos": { "x": 30, "y": 125 }, "action":"level5" },
-        { "extends": "chest", "pos": { "x": 125, "y": 210 }, "level": 10, "scene":6 },
+        { "extends": "door", "pos": { "x": 30, "y": 125 }, "action":"level7" },
+        { "extends": "chest", "pos": { "x": 125, "y": 210 }, "level": 14, "scene":8 },
         {"extends":"slim-platform","pos":{ "x": 10, "y": 450 }},
         { "extends": "slim-platform", "pos": { "x": 10, "y": 250 } },
         
@@ -98,9 +98,9 @@
         
         
         { "extends": "slim-platform", "pos": { "x": 440, "y": 350 } },
-        { "extends": "chest", "pos": { "x": 490, "y": 310 }, "level": 11, "scene":6 },
+        
        
       
-        { "extends": "door", "pos": { "x": 919, "y": 316 }, "action": "level7" }
+        { "extends": "door", "pos": { "x": 919, "y": 316 }, "action": "gameends" }
     ]
 }

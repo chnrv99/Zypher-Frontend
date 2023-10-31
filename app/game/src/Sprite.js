@@ -27,6 +27,7 @@ export class Sprite {
 
     draw(pos) {
         if (!this.isAnimated) {
+            // console.log(`the sprite is: ss_1_${this.spriteSet}.png`)
             Game.ctx.drawImage(assets.getAsset(`ss_1_${this.spriteSet}.png`), pos.x, pos.y);
             return;
         }

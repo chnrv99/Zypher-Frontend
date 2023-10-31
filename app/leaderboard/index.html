@@ -218,35 +218,56 @@
     </style>
 
     <script type="module">
-        //import { BACKEND } from "../api.js";
-        import cf from 'https://esm.sh/campfire.js';
-        import { leaderboard } from './leaderboard.js';
+        import { BACKEND } from "../api.js";
+        import cf from 'https://esm.sh/campfire.js@2.4.1';
 
-        //fetch(`${BACKEND}/leaderboard`).then(res => res.json()).then(data => {
-        const table = document.querySelector('table');
-        const tbody = document.createElement('tbody');
-        table.appendChild(tbody);
+        fetch(`${BACKEND}/leaderboard`).then(res => res.json()).then(data => {
+            console.log(data)
 
-        leaderboard.forEach(({
-            username,
-            level
-        }, i) => {
-            const tr = document.createElement('tr');
-            const td1 = document.createElement('td');
-            const td2 = document.createElement('td');
-            const td3 = document.createElement('td');
+            const table = document.querySelector('table');
+            const tbody = document.createElement('tbody');
+            table.appendChild(tbody);
 
-            td1.textContent = i + 1;
-            td2.textContent = cf.escape(username);
-            td3.textContent = level;
+            // data.slice(1).forEach(({
+            //     username,
+            //     level
+            // }, i) => {
+            //     const tr = document.createElement('tr');
+            //     const td1 = document.createElement('td');
+            //     const td2 = document.createElement('td');
+            //     const td3 = document.createElement('td');
 
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
+            //     td1.textContent = i + 1;
+            //     td2.textContent = cf.escape(username);
+            //     td3.textContent = level;
 
-            tbody.appendChild(tr);
+            //     tr.appendChild(td1);
+            //     tr.appendChild(td2);
+            //     tr.appendChild(td3);
+
+            //     tbody.appendChild(tr);
+            // });
+
+            data.forEach(({
+                username,
+                level
+            }, i) => {
+                const tr = document.createElement('tr');
+                const td1 = document.createElement('td');
+                const td2 = document.createElement('td');
+                const td3 = document.createElement('td');
+
+                td1.textContent = i + 1;
+                td2.textContent = cf.escape(username);
+                td3.textContent = level;
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+
+                tbody.appendChild(tr);
+            });
         });
-        //});
 
         if (localStorage.getItem('jwt')) {
             document.getElementById('login-nav').innerHTML = 'Logout';

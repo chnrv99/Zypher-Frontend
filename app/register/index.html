@@ -26,15 +26,35 @@
             <form>
                 <label for="username">Username</label>
                 <input type="text" name="username" placeholder="username..." id="username">
+
                 <label for="password">Password</label>
                 <input type="password" name="password" placeholder="password..." id="password">
+
+                <label for="member_1_name">Team member 1 name</label>
+                <input type="text" name="member_1_name" placeholder="name..." id="member_1_name">
+
+                <label for="member_1_regno">Team member 1 register number</label>
+                <input type="text" name="member_1_regno" placeholder="register number..." id="member_1_regno">
+
+                <label for="member_2_name">Team member 2 name</label>
+                <input type="text" name="member_2_name" placeholder="name..." id="member_2_name">
+
+                <label for="member_2_regno">Team member 2 register number</label>
+                <input type="text" name="member_2_regno" placeholder="register number..." id="member_2_regno">
+
+                <label for="member_3_name">Team member 3 name</label>
+                <input type="text" name="member_3_name" placeholder="name..." id="member_3_name">
+
+                <label for="member_3_regno">Team member 3 register number</label>
+                <input type="text" name="member_3_regno" placeholder="register number..." id="member_3_regno">
+
                 <input type="submit" value="REGISTER">
                 <p id="error"></p>
             </form>
         </div>
     </main>
     <style>
-        @font-face {
+        /* @font-face {
             font-family: 'Lord Story Demo';
             src: url('../assets/fonts/Lordstorydemo-L3zgy.ttf');
             display: swap;
@@ -65,14 +85,14 @@
 
             font-family: 'Lord Story Demo', cursive;
 
-            height: 100vh;
+            height: auto;
         }
 
         main {
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 100%;
+            height: auto;
         }
 
         header {
@@ -126,6 +146,7 @@
         form {
             display: flex;
             flex-direction: column;
+            
         }
 
         label {
@@ -168,7 +189,7 @@
             nav li:has(img) {
                 display: none;
             }
-        }
+        } */
     </style>
 
     <script type="module">
@@ -177,6 +198,12 @@
         const form = document.querySelector('form');
         const username = document.querySelector('#username');
         const password = document.querySelector('#password');
+        const member_1_name = document.querySelector('#member_1_name');
+        const member_1_regno = document.querySelector('#member_1_regno');
+        const member_2_name = document.querySelector('#member_2_name');
+        const member_2_regno = document.querySelector('#member_2_regno');
+        const member_3_name = document.querySelector('#member_3_name');
+        const member_3_regno = document.querySelector('#member_3_regno');
         const errorFeedback = document.querySelector('#error');
         form.addEventListener('submit', e => {
             e.preventDefault();
@@ -187,7 +214,13 @@
                 },
                 body: JSON.stringify({
                     username: username.value,
-                    password: password.value
+                    password: password.value,
+                    member_1_name: member_1_name.value,
+                    member_1_regno: member_1_regno.value,
+                    member_2_name: member_2_name.value,
+                    member_2_regno: member_2_regno.value,
+                    member_3_name: member_3_name.value,
+                    member_3_regno: member_3_regno.value,
                 }),
             }).then(res => res.json()).then(data => {
                 if (data.error) {
