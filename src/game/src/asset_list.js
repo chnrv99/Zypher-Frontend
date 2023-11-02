@@ -1,22 +1,22 @@
 export const ASSET_LIST = [
     {
-        name: "ss_12_fbking_walkL.png",
-        url: "assets/img/ss_12_fbking_walkL.png",
+        name: "ss_1_fbking_walkL.png",
+        url: "assets/imgNew/ss_8_fbking_walkL.png",
         type: "img",
     },
     {
-        name: "ss_12_fbking_walkR.png",
-        url: "assets/img/ss_12_fbking_walkR.png",
+        name: "ss_1_fbking_walkR.png",
+        url: "assets/imgNew/ss_8_fbking_walkR.png",
         type: "img",
     },
     {
         name: "ss_1_fbking_idleL.png",
-        url: "assets/img/ss_1_fbking_idleL.png",
+        url: "assets/imgNew/ss_1_fbking_idleL.png",
         type: "img",
     },
     {
         name: "ss_1_fbking_idleR.png",
-        url: "assets/img/ss_1_fbking_idleR.png",
+        url: "assets/imgNew/ss_1_fbking_idleR.png",
         type: "img",
     },
     {
