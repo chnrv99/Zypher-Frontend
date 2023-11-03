@@ -239,7 +239,7 @@ export const Game = {
             ({ level, text, image, raw } = await getQuestion(question_level));
             await genericChecks(raw);
 
-            const answer = await input({ text: `Level ${level}: ${text}`, imgUrl: image }).catch(
+            const answer = await input({ text: `Level ${level}: ${text}`, url: image }).catch(
                 noop => noop
             );
             ({ correct, raw, error } = await postAnswer(answer, question_level));
