@@ -353,6 +353,17 @@ nav{
 .event-rules ul li {
     margin-bottom: 5px;
 }
+.center {
+    max-width: 90%;
+    margin: 0 auto;
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+}
+
 .faq {
     max-width: 90%;
     margin: 0 auto;
