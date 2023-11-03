@@ -18,6 +18,36 @@ nav{
     display: none;
 }
 
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.background{
+    background-color: white;
+    padding: 0;
+    margin-left: 12em;
+    margin-right: 12em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+    
+    
+
+
+
+
+
+
+.flex p{
+    color: black;
+    
+    padding: 2em;
+}
 
 .nav-content {
     max-width: 1200px;
@@ -163,11 +193,27 @@ nav{
     .main-content {
         display: inline-table;
    }
+
+   .background {
+    margin-left: 7em;
+    margin-right: 7em;
+    padding-left: 0;
+    padding-right: 0;
+   
+   }
 }
 @media (max-width: 635px) {
     nav{
         padding: 0;
     }
+
+    .background{
+        margin-left: 2em;
+        margin-right: 2em;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .nav-content {
         display: flex;
         height: 35px;
