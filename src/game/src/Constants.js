@@ -29,7 +29,7 @@ export const Game = {
             if (Game.Input.isKeyDown("a")) {
                 Game.Player.vel.x -= Game.moveVel;
             }
-            if (Game.Input.isKeyDown(" ")) {
+            if (Game.Input.isKeyDown("w")) {
                 if (!Game.Player.jumping && Game.Player.grounded) {
                     Game.Player.jumping = true;
                     Game.Player.grounded = false;
