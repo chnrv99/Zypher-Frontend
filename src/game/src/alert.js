@@ -66,12 +66,18 @@ function message({ text, title = 'Info', customLabel = 'OK', safeBody = true }) 
     })
 }
 
-function input({ text, title = 'Input', safeBody = true, url = undefined }) {
+function input({ text, title = 'Input', safeBody = true, url = undefined, points }) {
     const [header, body, footer, mask] = create();
     return new Promise((resolve, reject) => {
         try {
             header.innerHTML = cf.escape(title);
             body.innerHTML = safeBody ? cf.escape(text) : text;
+            // add points 
+
+            cf.insert(cf.nu('div#alert-points', {
+                c: `Points: ${points}`
+            }), { atEndOf: body });
+
 
             if (url) {
                 cf.insert(cf.nu('a#alert-url', {
