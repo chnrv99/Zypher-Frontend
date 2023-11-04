@@ -272,11 +272,58 @@ export const Game = {
                         : "Sorry, try again ...",
                 });
             }
+            
             const data = await getUserData();
             await genericChecks(data.raw);
             Game.userData = data;
             Game.setPause(false);
         },
+        "displayDesc1": async () => {
+            await message({
+                text: "You have reached the first scene. Solve the question to unlock the next level.",
+            });
+        },
+        "displayDesc2": async () => {
+            await message({
+                text: "You have reached the second scene. Solve the question to unlock the next level.",
+            });
+        },
+        "displayDesc3": async () => {
+            await message({
+                text: "You have reached the third scene. Solve the question to unlock the next level.",
+            });
+        },
+        "displayDesc4": async () => {
+            await message({
+                text: "You have reached the fourth scene. Solve the question to unlock the next level.",
+            });
+        },
+        "displayDesc5": async () => {
+            await message({
+                text: "You have reached the fifth scene. Solve the question to unlock the next level.",
+            });
+        },
+        "displayDesc6": async () => {
+            await message({
+                text: "You have reached the sixth scene. Solve the question to unlock the next level.",
+            });
+        },
+        "displayDesc7": async () => {
+            await message({
+                text: "You have reached the seventh scene. Solve the question to unlock the next level.",
+            });
+        },
+        "displayDesc8": async () => {
+            await message({
+                text: "You have reached the eighth scene. Solve the question to unlock the next level.",
+            });
+        },
+        "displayDesc9": async () => {
+            await message({
+                text: "You have reached the ninth scene. Solve the question to unlock the next level.",
+            });
+        },
+
     },
     setPause: function (bool) {
         Game.paused = bool;

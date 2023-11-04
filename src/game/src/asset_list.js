@@ -119,5 +119,20 @@ export const ASSET_LIST = [
         name:"background_two.png",
         url:"assets/imgNew/background_two.png",
         type:"img",
+    },
+    {
+        name:"background_start.png",
+        url:"assets/imgNew/background_start.png",
+        type:"img",
+    },
+    {
+        name:"background_middle.png",
+        url:"assets/imgNew/background_middle.png",
+        type:"img",
+    },
+    {
+        name:"background_final.png",
+        url:"assets/imgNew/background_final.png",
+        type:"img",
     }
 ];

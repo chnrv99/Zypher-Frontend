@@ -1,6 +1,6 @@
 {
     "name": "intro",
-    "bg": "background_two.png",
+    "bg": "background_middle.png",
     "player": {
         "pos": { "x": 20, "y": 125 },
         "sprite": "fbking",
@@ -78,6 +78,8 @@
         { "extends": "chest", "pos": { "x": 125, "y": 210 }, "level": 10, "scene":6 },
         {"extends":"slim-platform","pos":{ "x": 10, "y": 450 }},
         { "extends": "slim-platform", "pos": { "x": 10, "y": 250 } },
+
+        { "extends": "coin", "pos": { "x": 100, "y": 410 }, "action":"displayDesc6"},
         
         {"extends":"slim-platform","pos":{ "x": 10, "y": 450 }},
         { "extends": "slim-platform", "pos": { "x": 70, "y": 450 } },

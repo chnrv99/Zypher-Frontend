@@ -1,6 +1,6 @@
 {
     "name": "intro",
-    "bg": "background.png",
+    "bg": "background_middle.png",
     "player": {
         "pos": { "x": 20, "y": 125 },
         "sprite": "fbking",
@@ -79,6 +79,8 @@
         {"extends":"slim-platform","pos":{ "x": 10, "y": 450 }},
         { "extends": "slim-platform", "pos": { "x": 10, "y": 250 } },
         
+        { "extends": "coin", "pos": { "x": 100, "y": 410 }, "action":"displayDesc7"},
+
         {"extends":"slim-platform","pos":{ "x": 10, "y": 450 }},
         { "extends": "slim-platform", "pos": { "x": 70, "y": 450 } },
         { "extends": "slim-platform", "pos": { "x": 130, "y": 450 } },

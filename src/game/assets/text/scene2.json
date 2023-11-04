@@ -1,6 +1,6 @@
 {
   "name": "intro",
-  "bg": "background_two.png",
+  "bg": "background_middle.png",
   "player": {
     "pos": { "x": 20, "y": 125 },
     "sprite": "fbking",
@@ -93,6 +93,8 @@
     { "extends": "slim-platform", "pos": { "x": 680, "y": 450 } },
     { "extends": "slim-platform", "pos": { "x": 740, "y": 450 } },
     { "extends": "slim-platform", "pos": { "x": 800, "y": 450 } },
+
+    { "extends": "coin", "pos": { "x": 100, "y": 410 }, "action":"displayDesc2"},
 
    
     
