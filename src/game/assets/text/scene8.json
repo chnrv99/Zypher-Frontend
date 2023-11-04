@@ -60,6 +60,15 @@
             "width": 33,
             "height": 101
         },
+        "coin": {
+            "type": "coin",
+            "etype": "KTRIGGER",
+            "sprite": "coin",
+            "isAnimated": false,
+            "width": 49,
+            "height": 40,
+            "action": "coin"
+          },
         "platform": {
             "etype": "platform",
             "type": "platform",

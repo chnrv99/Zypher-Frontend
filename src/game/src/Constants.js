@@ -164,6 +164,7 @@ export const Game = {
         },
         level2: async () => {
             Game.userData = await getUserData();
+            console.log(Game.userData.scene_reached)
             if (Game.userData.scene_reached > 1) await loadScene("scene2");
             else
                 await message({
