@@ -293,6 +293,49 @@
         const errorFeedback = document.querySelector('#error');
         form.addEventListener('submit', e => {
             e.preventDefault();
+            // checking if name and regno satisfies the regex and each regno and name are unique
+            const registrationNumberPattern = /^\d{2}[A-Z]{3}\d{4}$/;
+            const namePattern = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
+            if (!registrationNumberPattern.test(member_1_regno.value)) {
+                errorFeedback.innerHTML = 'Invalid Registration Number';
+                return;
+            }
+            if (!namePattern.test(member_1_name.value)) {
+                errorFeedback.innerHTML = 'Invalid Name';
+                return;
+            }
+            if (member_2_regno.value !== 'NA') {
+                if (!registrationNumberPattern.test(member_2_regno.value)) {
+                    errorFeedback.innerHTML = 'Invalid Registration Number';
+                    return;
+                }
+                if (!namePattern.test(member_2_name.value)) {
+                    errorFeedback.innerHTML = 'Invalid Name';
+                    return;
+                }
+            }
+            if (member_3_regno.value !== 'NA') {
+                if (!registrationNumberPattern.test(member_3_regno.value)) {
+                    errorFeedback.innerHTML = 'Invalid Registration Number';
+                    return;
+                }
+                if (!namePattern.test(member_3_name.value)) {
+                    errorFeedback.innerHTML = 'Invalid Name';
+                    return;
+                }
+            }
+            if (member_1_regno.value === member_2_regno.value || member_1_regno.value === member_3_regno.value ||
+                member_2_regno.value === member_3_regno.value) {
+                errorFeedback.innerHTML = 'Registration Number should be unique';
+                return;
+            }
+            if (member_1_name.value === member_2_name.value || member_1_name.value === member_3_name.value ||
+                member_2_name.value === member_3_name.value) {
+                errorFeedback.innerHTML = 'Name should be unique';
+                return;
+            }
+            
+
             fetch(`${BACKEND}/register`, {
                 method: 'POST',
                 headers: {
