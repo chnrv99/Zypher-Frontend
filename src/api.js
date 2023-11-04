@@ -1,4 +1,4 @@
-export const BACKEND = "https://zypher-backend-new.azurewebsites.net";
+export const BACKEND = "http://localhost:8080";
 
 async function talkToServer({ type, method = "GET", body }) {
     if (!type) throw new Error('Error: server communication attempted without type');
