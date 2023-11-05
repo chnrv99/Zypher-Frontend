@@ -44,7 +44,7 @@
 					<div class="card-body">
 						<h5 class="card-title" id="challenge_1_title">Challenge Title</h5>
 						<h6 class="card-subtitle mb-2 text-body-secondary">Challenge 1</h6>
-						<p class="card-text" id="challenge_1_desc">
+						<p class="card-text" id="challenge_1_points">
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</p>
@@ -80,7 +80,7 @@
 					<div class="card-body">
 						<h5 class="card-title" id="challenge_2_title">Challenge Title</h5>
 						<h6 class="card-subtitle mb-2 text-body-secondary">Challenge 2</h6>
-						<p class="card-text" id="challenge_2_desc">
+						<p class="card-text" id="challenge_2_points">
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</p>
@@ -116,7 +116,7 @@
 					<div class="card-body">
 						<h5 class="card-title" id="challenge_3_title">Challenge Title</h5>
 						<h6 class="card-subtitle mb-2 text-body-secondary">Challenge 3</h6>
-						<p class="card-text" id="challenge_3_desc">
+						<p class="card-text" id="challenge_3_points">
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</p>
@@ -152,7 +152,7 @@
 					<div class="card-body">
 						<h5 class="card-title" id="challenge_4_title">Challenge Title</h5>
 						<h6 class="card-subtitle mb-2 text-body-secondary">Challenge 4</h6>
-						<p class="card-text" id="challenge_4_desc">
+						<p class="card-text" id="challenge_4_points">
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</p>
@@ -188,7 +188,7 @@
 					<div class="card-body">
 						<h5 class="card-title" id="challenge_5_title">Challenge Title</h5>
 						<h6 class="card-subtitle mb-2 text-body-secondary">Challenge 5</h6>
-						<p class="card-text" id="challenge_5_desc">
+						<p class="card-text" id="challenge_5_points">
 							Some quick example text to build on the card title and make up the
 							bulk of the card's content.
 						</p>
@@ -277,28 +277,28 @@
 				console.log(data);
 				//    update the special challenges content at their respective ids
 				document.getElementById('challenge_1_title').innerHTML = data[0].text;
-				document.getElementById('challenge_1_desc').innerHTML =
-					data[0].description;
+				document.getElementById('challenge_1_points').innerHTML = 'Points: ' + 
+					data[0].points;
 				document.getElementById('challenge_1_link').href = data[0].link;
 
 				document.getElementById('challenge_2_title').innerHTML = data[1].text;
-				document.getElementById('challenge_2_desc').innerHTML =
-					data[1].description;
+				document.getElementById('challenge_2_points').innerHTML ='Points: ' + 
+					data[1].points;
 				document.getElementById('challenge_2_link').href = data[1].link;
 
 				document.getElementById('challenge_3_title').innerHTML = data[2].text;
-				document.getElementById('challenge_3_desc').innerHTML =
-					data[2].description;
+				document.getElementById('challenge_3_points').innerHTML ='Points: ' + 
+					data[2].points;
 				document.getElementById('challenge_3_link').href = data[2].link;
 
 				document.getElementById('challenge_4_title').innerHTML = data[3].text;
-				document.getElementById('challenge_4_desc').innerHTML =
-					data[3].description;
+				document.getElementById('challenge_4_points').innerHTML ='Points: ' + 
+					data[3].points;
 				document.getElementById('challenge_4_link').href = data[3].link;
 
 				document.getElementById('challenge_5_title').innerHTML = data[4].text;
-				document.getElementById('challenge_5_desc').innerHTML =
-					data[4].description;
+				document.getElementById('challenge_5_points').innerHTML ='Points: ' + 
+					data[4].points;
 				document.getElementById('challenge_5_link').href = data[4].link;
 			});
 
