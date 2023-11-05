@@ -111,7 +111,7 @@
     { "extends": "slim-platform", "pos": { "x": 440, "y": 350 } },
    
     {"extends": "chest", "pos": { "x": 490, "y": 310 }, "level": 9, "scene":5 },
-    { "extends": "platform", "pos": { "x": 831, "y": 446 } },
+    { "extends": "slim-platform", "pos": { "x": 831, "y": 450 } },
     { "extends": "door", "pos": { "x": 919, "y": 316 }, "action": "level6" }
   ]
 }
