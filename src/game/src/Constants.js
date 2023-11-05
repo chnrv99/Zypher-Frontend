@@ -232,8 +232,8 @@ export const Game = {
             if (Game.userData.scene_reached === 10) {
                 Game.setPause(true);
                 await message({
-                    title: "Congratulations!",
-                    text: "You have completed Zypher! Please take out two minutes and fill the <a href='www.google.com'>feedback form</a>",
+                    title: "Congratulations! You have completed Zypher! For climbing up the leaderboard, consider solving the remaining challenges.",
+                    text: "Frantically collecting all the incriminating evidence on his drive, F0X3R heard the steel gates rumble once more. Panic surged through him as he realized they had been tipped off. Barely escaping the closing gates, Ryan fled for his life. Two weeks later- The headlines in a remote bar in Mannar blared, 'German Hacker Erdenfeld Fox Assassinated in a Colombo Hotel.' Meanwhile, Ryan sat in silence, sipping his coffee by the window, finally at peace, and whispered to himself, 'Now rest in peace, Mother.'",
                     safeBody: false,
                 });
             } else
@@ -269,7 +269,7 @@ export const Game = {
             } else {
                 await message({
                     text: correct
-                        ? "Correct answer! The next chest has been unlocked."
+                        ? "Correct answer! The next level has been unlocked."
                         : "Sorry, try again ...",
                 });
             }
@@ -281,47 +281,47 @@ export const Game = {
         },
         "displayDesc1": async () => {
             await message({
-                text: "You have reached the first scene. Solve the question to unlock the next level.",
+                text: "As F0X3R scoured through the confidential files of Erden LTD, the arch-nemesis of Harper Corp, exploiting the only zero-day vulnerability he had uncovered within their organization, a sudden and unexpected pop-up message flashed on his screen for a mere split second. 'Hello, Ryan Fox. To what do we owe this unexpected pleasure? What's a skilled white-hat hacker, residing in Munich and masquerading as an ordinary software developer at Harper Corp, doing poking around here? When you can do so much better…' Intrigued, F0X3R couldn't believe his eyes; he initially blamed it on the clock. It was just a fleeting moment, but the mystery lingered. He couldn't ignore it. That's when he stumbled upon a peculiar folder named 'Z-Project.' Solve the challenge to find out the contents",
             });
         },
         "displayDesc2": async () => {
             await message({
-                text: "You have reached the second scene. Solve the question to unlock the next level.",
+                text: "A triumphant grin spread across F0X3R's face as he secured root access to Erden LTD's systems. Yet, a text file from the enigmatic 'Z-Project' gave him pause. It contained an encrypted ciphertext hidden in plain sight, only to be deciphered as coordinates: 51.2025° N, 13.1592° E. In an instant, F0X3R's mind raced, realizing that these coordinates pointed to nowhere else but Ostrau, where he had spent his formative years and where his mother had taken her last breath. The weight of this discovery propelled him to book a flight to Ostrau without hesitation. Upon entering his old apartment, he sensed an eerie difference. His one-room dwelling now held only a monitor on a table and a bottle of water. The monitor abruptly flashed 'HELLO F0X3R,' and he was logged into his own email account. Automated steel gates clanged shut behind him, sealing his fate.",
             });
         },
         "displayDesc3": async () => {
             await message({
-                text: "You have reached the third scene. Solve the question to unlock the next level.",
+                text: "'Welcome to the Zypher Quest,' echoed in the mysterious message. Countless hackers, have one hope, one goal, one mission and one ambition to pass this test",
             });
         },
         "displayDesc4": async () => {
             await message({
-                text: "You have reached the fourth scene. Solve the question to unlock the next level.",
+                text: "With each step, F0X3R felt closer to his destiny. 'Fox, you are one step closer to your brightest future. Keep your spirits high, for Z demands excellence, and those who fall short pay the price.' he muttered, beginning to grasp the gravity of his involvement. 'They called me Fox. They know everything,'",
             });
         },
         "displayDesc5": async () => {
             await message({
-                text: "You have reached the fifth scene. Solve the question to unlock the next level.",
+                text: "With determination in his eyes, F0X3R received a stark warning, 'Do not falter here. Do not let down the millions who await this opportunity. Do not let down Z0d.'",
             });
         },
         "displayDesc6": async () => {
             await message({
-                text: "You have reached the sixth scene. Solve the question to unlock the next level.",
+                text: "The final email from the Zypher Quest appeared. 'Unravel the challenges to test your prowess,' it instructed, setting the stage for the climax.",
             });
         },
         "displayDesc7": async () => {
             await message({
-                text: "You have reached the seventh scene. Solve the question to unlock the next level.",
+                text: "The imposing steel gates rumbled open, revealing the next chapter of F0X3R's journey. 'Welcome to Z0D1AC, Ryan Fox,' the message declared. 'You are recruited. Z0D1AC seeks to employ the brightest minds in the hacking world for a divine purpose – the purpose of global domination and the elimination of any weak links. You, Fox, are chosen for this purpose. Do not disappoint us.'",
             });
         },
         "displayDesc8": async () => {
             await message({
-                text: "You have reached the eighth scene. Solve the question to unlock the next level.",
+                text: "As F0X3R stumbled upon a photograph of himself and his mother from the fateful night she was brutally killed, the shock and realization hit him like a tidal wave. 'Z0D1AC killed my mother?! Z0D1AC killed my mother!!!' A tear rolled down his cheek as he began to uncover the haunting truth behind her death.",
             });
         },
         "displayDesc9": async () => {
             await message({
-                text: "You have reached the ninth scene. Solve the question to unlock the next level.",
+                text: "Fueled by the revelation of Z0D1AC's sinister involvement, Ryan traced the dark threads back to Russia's flag and damning logs. 'Russia hired Z0D1AC to wage a cyberwar against Ukraine,' he concluded. Further investigation revealed an NFT and a vulnerable IP address owned by none other than Erdenfeld Fox, his stepfather. The man he thought was dead had been alive all along.",
             });
         },
 
