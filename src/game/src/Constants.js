@@ -63,14 +63,42 @@ export const Game = {
             Game.pressedKeys[e.key] = false;
             if (e.key === "e" && !Game.paused && Game.Player.trigger) {
                 const cause = Game.Player.triggerParent;
-                console.log("cause is:",cause)
+                console.log("cause is:", cause)
                 if (cause.spriteName === "chest") {
-                    // if (cause.misc.level < Game.userData.level) return;
-                    if(!(Game.userData.answered_levels.includes(cause.misc.level)))
-                        await Game.actions["launch-question"](cause.misc.level);
+                   
 
+
+
+                    console.log("user data:", Game.userData.answered_levels, "cause data:", cause.misc.level);
+                    const levelNumber = parseInt(cause.misc.level, 10);
+                    let new_levels = []
+                    const singleDigitRegex = /^\d$/;
+                    const doubleDigitRegex = /^\d{2}$/;
+                    for(let i=1;i<Game.userData.answered_levels.length;i++){
+                        if(doubleDigitRegex.test(Game.userData.answered_levels[i] + Game.userData.answered_levels[i+1])){
+                            new_levels.push(parseInt(Game.userData.answered_levels[i] + Game.userData.answered_levels[i+1]))
+                            i++;
+                        }
+                        else if(singleDigitRegex.test(Game.userData.answered_levels[i])){
+                            new_levels.push(parseInt(Game.userData.answered_levels[i]))
+                        }
+
+                        // new_levels.push(parseInt(Game.userData.answered_levels[i]))
+                    }
+                    console.log("Parsed cause level:", levelNumber);
+                    console.log("Answered levels:", new_levels);
+                    console.log("Type of Game.userData.answered_levels[0]:", typeof Game.userData.answered_levels[0]);
+
+                    console.log("Is level included:", new_levels.includes(levelNumber));
+                    if (!new_levels.includes(levelNumber)){
+                        console.log("Launching question for level:", levelNumber);
+                        await Game.actions["launch-question"](levelNumber);
+                    }
+
+
+                   
                     if (cause.misc.scene == Game.userData.scene_reached)
-                    // trying to fetch the question according to the chest level, so that the user can come back to the scene and solve if needed
+                        
                         await Game.actions[Game.Player.trigger](cause.misc.level);
                     // if the user didnt complete the previous level, he will get this error
                     // so for us, if the user didnt complete the previous scene and goes to next scene, he should get this error
@@ -273,7 +301,7 @@ export const Game = {
                         : "Sorry, try again ...",
                 });
             }
-            
+
             const data = await getUserData();
             await genericChecks(data.raw);
             Game.userData = data;
