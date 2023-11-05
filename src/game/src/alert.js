@@ -82,7 +82,7 @@ function input({ text, title = 'Input', safeBody = true, url = undefined, points
             if (url) {
                 cf.insert(cf.nu('a#alert-url', {
                     attrs: { href: url, target: '_blank' },
-                    c: `assets`
+                    c: `Click here for assets`
                 }), { atEndOf: body });
             }
 
